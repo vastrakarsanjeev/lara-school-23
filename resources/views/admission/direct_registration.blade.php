@@ -42,7 +42,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Enquiry </h1>
+                        <h1></h1>
                     </div>
 
                 </div>
@@ -56,7 +56,7 @@
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-default">
                     <div class="card-header">
-                        <h3 class="card-title">Enquiry  Form</h3>
+                        <h3 class="card-title">Direct Registration Form</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -64,8 +64,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="sl_no">Serial No :</label>
-                                    <input type="text" class="form-control" id="sl_no" placeholder="">
+                                    <label for="reg_no">Registration No :</label>
+                                    <input type="text" class="form-control" id="reg_no" placeholder="">
                                 </div>
                                 <!-- /.form-group -->
 
@@ -73,7 +73,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Enquiry Date:</label>
+                                    <label>Registration Date :</label>
                                     <div class="input-group">
                                       <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
@@ -86,6 +86,27 @@
 
                                 <!-- /.form-group -->
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Session :</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">Alabama</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+
+                                <!-- /.form-group -->
+
+                            <!-- /.form-group -->
+
+                            <!-- /.form-group -->
+                        </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="name_student">Name of Student :</label>
@@ -116,19 +137,31 @@
 
                             <!-- /.form-group -->
                         </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="last_school">Last School :</label>
-                                    <input type="text" class="form-control" id="last_school" placeholder="Last School">
-                                </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Last Class Passed :</label>
+                                <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>California</option>
+                                    <option>Delaware</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Washington</option>
+                                </select>
                             </div>
+                            <!-- /.form-group -->
+
+                            <!-- /.form-group -->
+
+                        <!-- /.form-group -->
+
+                        <!-- /.form-group -->
+                    </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="last_result">Last Result in % :</label>
-                                    <input type="text" class="form-control" id="last_result" placeholder="Last Result in %">
+                                    <label for="last_result">Last Class % or Grade :</label>
+                                    <input type="text" class="form-control" id="last_result" placeholder="Last Result">
                                 </div>
                                 <!-- /.form-group -->
 
@@ -143,13 +176,6 @@
 
                                 <!-- /.form-group -->
                             </div>
-                            <div class="col-sm-6">
-                                <!-- textarea -->
-                                <div class="form-group">
-                                  <label>Address</label>
-                                  <textarea class="form-control" rows="3" placeholder="Address"></textarea>
-                                </div>
-                              </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Contact No :</label>
@@ -167,22 +193,33 @@
                                 <!-- /.form-group -->
                             </div>
                             <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Remark :</label>
-                                        <select class="form-control select2" style="width: 100%;">
-                                            <option selected="selected">Alabama</option>
-                                            <option>Alaska</option>
-                                            <option>California</option>
-                                            <option>Delaware</option>
-                                            <option>Tennessee</option>
-                                            <option>Texas</option>
-                                            <option>Washington</option>
-                                        </select>
+                                <div class="form-group">
+                                    <label>Email</label>
+
+                                    <div class="input-group">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                      </div>
+                                      <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask placeholder="Email">
                                     </div>
-                                    <!-- /.form-group -->
+                                    <!-- /.input group -->
+                                  </div>
+                                <!-- /.form-group -->
 
-                                    <!-- /.form-group -->
-
+                                <!-- /.form-group -->
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- textarea -->
+                                <div class="form-group">
+                                  <label>Address</label>
+                                  <textarea class="form-control" rows="3" placeholder="Address"></textarea>
+                                </div>
+                              </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="father_name">Name :</label>
+                                    <input type="text" class="form-control" id="name"disabledgi>
+                                </div>
                                 <!-- /.form-group -->
 
                                 <!-- /.form-group -->
@@ -194,7 +231,7 @@
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-info">Submit Enquiry</button>
+                        <button type="submit" class="btn btn-info">Submit Registration</button>
                     </div>
 
                 </div>

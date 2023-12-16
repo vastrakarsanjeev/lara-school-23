@@ -23,6 +23,8 @@ Use App\Http\Controllers\AdmissionViewEnquiryUnderProcessController;
 Use App\Http\Controllers\AdmissionViewDisQualifiedEnquiryController;
 Use App\Http\Controllers\AdmissionEnquiryApprovalDetailsController;
 Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
+Use App\Http\Controllers\AdmissionDirectRegistrationController;
+//Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,9 +60,19 @@ Route::get('/masters/master_create_subject',[MasterCreateSubjectController::clas
 Route::get('/masters/master_leave',[MasterLiveController::class,'view'])->name('master.leave');
 Route::get('/masters/master_session',[MasterSessionController::class,'view'])->name('master.session');
 Route::get('/admission/enquiry',[AdmissionEnquiryController::class,'view'])->name('admission.enquiry');
-Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
-Route::get('/admission/view_enquiry_underprocess',[AdmissionViewEnquiryUnderProcessController::class,'view'])->name('admission.view.enquiry.underprocess');
-Route::get('/admission/view_enquiry_disqualified',[AdmissionViewDisQualifiedEnquiryController::class,'view'])->name('admission.view.enquiry.disqualified');
-Route::get('/admission/enquiry_approval_details',[AdmissionEnquiryApprovalDetailsController::class,'view'])->name('admission.enquiry.approval.details');
-Route::get('/admission/enquiry_approval_history',[AdmissionEnquiryApprovalHistoryController::class,'view'])->name('admission.enquiry.approval.history');
+Route::group(['admission'], function(){
+    Route::get('/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
+Route::get('/view_enquiry_underprocess',[AdmissionViewEnquiryUnderProcessController::class,'view'])->name('admission.view.enquiry.underprocess');
+Route::get('/view_enquiry_disqualified',[AdmissionViewDisQualifiedEnquiryController::class,'view'])->name('admission.view.enquiry.disqualified');
+Route::get('/enquiry_approval_details',[AdmissionEnquiryApprovalDetailsController::class,'view'])->name('admission.enquiry.approval.details');
+Route::get('/enquiry_approval_history',[AdmissionEnquiryApprovalHistoryController::class,'view'])->name('admission.enquiry.approval.history');
+Route::get('/direct_registration',[AdmissionDirectRegistrationController::class,'view'])->name('direct.registration');
+
+});
+// Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
+// Route::get('/admission/view_enquiry_underprocess',[AdmissionViewEnquiryUnderProcessController::class,'view'])->name('admission.view.enquiry.underprocess');
+// Route::get('/admission/view_enquiry_disqualified',[AdmissionViewDisQualifiedEnquiryController::class,'view'])->name('admission.view.enquiry.disqualified');
+// Route::get('/admission/enquiry_approval_details',[AdmissionEnquiryApprovalDetailsController::class,'view'])->name('admission.enquiry.approval.details');
+// Route::get('/admission/enquiry_approval_history',[AdmissionEnquiryApprovalHistoryController::class,'view'])->name('admission.enquiry.approval.history');
+// Route::get('/admission/direct_registration',[AdmissionDirectRegistrationController::class,'view'])->name('adm.d');
 
