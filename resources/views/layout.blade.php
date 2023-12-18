@@ -409,25 +409,25 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('registration.underprocess')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Registration</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('registration.approval.section')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Registration Approval</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('awaiting.admission')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p> Admission</p>
+                                        <p>Awaiting Admission</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('fast.admission')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Quick Admission-Form</p>
                                     </a>

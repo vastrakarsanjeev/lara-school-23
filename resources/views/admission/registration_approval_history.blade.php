@@ -39,7 +39,7 @@ Brilliant Public School
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Enquiry Approval </h1>
+                        <h1>Registration Approval</h1>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -53,21 +53,21 @@ Brilliant Public School
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="btn-group w-100">
-                                  <a href="{{route('admission.enquiry.approval.details')}}" class="btn btn-secondary col fileinput-button">
+                                  <a href="{{route('registration.approval.section')}}" class="btn btn-secondary col fileinput-button">
                                     <!--<i class="fa-solid fa-circle-check text-success"></i>-->
-                                    <span>Enquiry Approval & Details Section</span>
+                                    <span>Registration Section</span>
                                   </a>
 
-                                  <a href="{{route('admission.enquiry.approval.history')}}" class="btn btn-light col cancel">
+                                  <a href="{{route('registration.approval.history')}}" class="btn btn-light col cancel">
                                     <!--<i class="fas fa-times-circle text-danger"></i>-->
-                                    <span>Enquiry Approval HIstory</span>
+                                    <span>Registration History</span>
                                   </a>
                                 </div>
                               </div>
                         </div>
                     </div>
                     <div class="mx-3 my-2">
-                        <h4>Enquiry Approval & Details Section</h4>
+                        <h4>Search Registration History</h4>
                     </div>
                     <div class="card-body">
                         <div class="row">

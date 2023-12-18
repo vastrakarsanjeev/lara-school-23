@@ -24,6 +24,12 @@ Use App\Http\Controllers\AdmissionViewDisQualifiedEnquiryController;
 Use App\Http\Controllers\AdmissionEnquiryApprovalDetailsController;
 Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
 Use App\Http\Controllers\AdmissionDirectRegistrationController;
+Use App\Http\Controllers\AdmissionRegistrationdeclinedController;
+Use App\Http\Controllers\AdmissionRegistrationHistoryController;
+Use App\Http\Controllers\AdmissionRegistrationApprovalSectionController;
+Use App\Http\Controllers\AdmissionRegistrationApprovalHistoryController;
+Use App\Http\Controllers\AdmissionAwaitingController;
+Use App\Http\Controllers\AdmissionFastAdmissionController;
 //Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +73,13 @@ Route::get('/view_enquiry_disqualified',[AdmissionViewDisQualifiedEnquiryControl
 Route::get('/enquiry_approval_details',[AdmissionEnquiryApprovalDetailsController::class,'view'])->name('admission.enquiry.approval.details');
 Route::get('/enquiry_approval_history',[AdmissionEnquiryApprovalHistoryController::class,'view'])->name('admission.enquiry.approval.history');
 Route::get('/direct_registration',[AdmissionDirectRegistrationController::class,'view'])->name('direct.registration');
+Route::get('/registration-underprocess',[AdmissionDirectRegistrationController::class,'view'])->name('registration.underprocess');
+Route::get('/registration-history',[AdmissionRegistrationHistoryController::class,'view'])->name('registration.history');
+Route::get('/registration-decline',[AdmissionRegistrationdeclinedController::class,'view'])->name('registration.declined');
+Route::get('/registration-approval-section',[AdmissionRegistrationApprovalSectionController::class,'view'])->name('registration.approval.section');
+Route::get('/registration-approval-history',[AdmissionRegistrationApprovalHistoryController::class,'view'])->name('registration.approval.history');
+Route::get('/awaiting-admission',[AdmissionAwaitingController::class,'view'])->name('awaiting.admission');
+Route::get('/fast-admission',[AdmissionFastAdmissionController::class,'view'])->name('fast.admission');
 
 });
 // Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');

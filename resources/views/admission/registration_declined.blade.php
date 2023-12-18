@@ -53,16 +53,16 @@ Brilliant Public School
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="btn-group w-100">
-                                  <a href="{{route('registration.underprocess')}}" class="btn btn-light col fileinput-button">
-                                    {{-- <i class="fa-solid fa-circle-check text-success"></i> --}}
+                                  <a href="{{route('registration.underprocess')}}" class="btn btn-secondary col fileinput-button">
+
                                     <span>Underprocess Registration</span>
                                   </a>
-                                  <a href="{{route('registration.declined')}}" class="btn btn-secondary col start">
-                                    {{-- <i class="fas fa-upload " style="color:rgb(219, 145, 6)" ></i> --}}
+                                  <a href="{{route('registration.declined')}}" class="btn btn-light col start">
+
                                     <span>Declined Registrations</span>
                                   </a>
                                   <a href="{{route('registration.history')}}" class="btn btn-secondary col cancel">
-                                    {{-- <i class="fas fa-times-circle text-danger"></i> --}}
+
                                     <span> Registration History</span>
                                   </a>
                                 </div>
@@ -70,7 +70,7 @@ Brilliant Public School
                         </div>
                     </div>
                     <div class="mx-3 my-1">
-                        <h4>Underprocess Registration</h4>
+                        <h4>Declined Registrations</h4>
                     </div>
                     <div class="row mx-3 my-1">
                         <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-sm-center my-1 ">
@@ -97,20 +97,22 @@ Brilliant Public School
                                 <tr>
                                     <th><div class="form-group clearfix " style="margin: 0;">
                                         <div class="icheck-primary d-inline">
-<input type="checkbox" name="jj" id="check_all">
+                                            <input type="checkbox"  id="check_all">
                                           <label for="check_all">
                                             Check All
                                           </label>
                                         </div>
                                       </div></th>
                                     <th>Sl No.</th>
-                                    <th>Enq. No.</th>
-                                    <th>Enquiry Date</th>
+                                    <th>Registration Date</th>
+                                    <th>Registration No.</th>
                                     <th>Name</th>
-                                    <th>Class</th>
                                     <th>Father name</th>
-                                    <th>Last Result</th>
-                                    <th>Action</th>
+                                    <th>Status</th>
+                                    <th>Declined Date</th>
+                                    <th>Restore</th>
+                                    <th>View</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -121,9 +123,11 @@ Brilliant Public School
                                     <td>Camino 1.0</td>
                                     <td>Camino 1.0</td>
                                     <td>Gecko</td>
-                                    <td>Camino 1.0</td>
                                     <td>Gecko</td>
-                                    <td><button class="btn btn-success">Register</button></td>
+                                    <td>Camino 1.0</td>
+                                    <td><button class="btn btn-info">Restore</button></td>
+                                    <td><button class="btn btn-success">View</button></td>
+                                    <td><button class="btn btn-danger">Delete</button></td>
                                 </tr>
                                 <tr>
                                     <td>Gecko</td>
@@ -132,9 +136,11 @@ Brilliant Public School
                                     <td>Camino 1.0</td>
                                     <td>Camino 1.0</td>
                                     <td>Gecko</td>
-                                    <td>Camino 1.0</td>
                                     <td>Gecko</td>
-                                    <td><button class="btn btn-success">Register</button></td>
+                                    <td>Camino 1.0</td>
+                                    <td><button class="btn btn-info">Restore</button></td>
+                                    <td><button class="btn btn-success">View</button></td>
+                                    <td><button class="btn btn-danger">Delete</button></td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -148,14 +154,16 @@ Brilliant Public School
                                               </label>
                                             </div>
                                           </div></th>
-                                        <th>Sl No.</th>
-                                        <th>Enq. No.</th>
-                                        <th>Enquiry Date</th>
-                                        <th>Name</th>
-                                        <th>Class</th>
-                                        <th>Father name</th>
-                                        <th>Last Result</th>
-                                        <th>Action</th>
+                                          <th>Sl No.</th>
+                                          <th>Registration Date</th>
+                                          <th>Registration No.</th>
+                                          <th>Name</th>
+                                          <th>Father name</th>
+                                          <th>Status</th>
+                                          <th>Declined Date</th>
+                                          <th>Restore</th>
+                                          <th>View</th>
+                                          <th>Delete</th>
                                     </tr>
                                 </tr>
                             </tfoot>
@@ -163,7 +171,7 @@ Brilliant Public School
                     </div>
 
                     <div class="card-footer">
-                        use paginate
+                        usepaginate
                     </div>
                 </div>
                 <!-- /.card -->

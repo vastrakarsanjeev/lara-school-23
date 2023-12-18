@@ -39,7 +39,7 @@ Brilliant Public School
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Registration Details </h1>
+                        <h1>Registration Approval</h1>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -53,24 +53,20 @@ Brilliant Public School
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="btn-group w-100">
-                                  <a href="{{route('registration.underprocess')}}" class="btn btn-light col fileinput-button">
+                                  <a href="{{route('registration.approval.section')}}" class="btn btn-light col fileinput-button">
                                     {{-- <i class="fa-solid fa-circle-check text-success"></i> --}}
-                                    <span>Underprocess Registration</span>
+                                    <span>Registration Approval Section </span>
                                   </a>
-                                  <a href="{{route('registration.declined')}}" class="btn btn-secondary col start">
-                                    {{-- <i class="fas fa-upload " style="color:rgb(219, 145, 6)" ></i> --}}
-                                    <span>Declined Registrations</span>
-                                  </a>
-                                  <a href="{{route('registration.history')}}" class="btn btn-secondary col cancel">
+                                  <a href="{{route('registration.approval.history')}}" class="btn btn-secondary col cancel">
                                     {{-- <i class="fas fa-times-circle text-danger"></i> --}}
-                                    <span> Registration History</span>
+                                    <span> Registration Approval History</span>
                                   </a>
                                 </div>
                               </div>
                         </div>
                     </div>
                     <div class="mx-3 my-1">
-                        <h4>Underprocess Registration</h4>
+                        <h4>Registration Approval Section </h4>
                     </div>
                     <div class="row mx-3 my-1">
                         <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-sm-center my-1 ">
@@ -104,13 +100,15 @@ Brilliant Public School
                                         </div>
                                       </div></th>
                                     <th>Sl No.</th>
-                                    <th>Enq. No.</th>
-                                    <th>Enquiry Date</th>
+                                    <th>Reg. No.</th>
+                                    <th>Reg. Date</th>
                                     <th>Name</th>
                                     <th>Class</th>
                                     <th>Father name</th>
                                     <th>Last Result</th>
-                                    <th>Action</th>
+                                    <th>Approve</th>
+                                    <th>Decline</th>
+                                    <th>View</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -123,7 +121,9 @@ Brilliant Public School
                                     <td>Gecko</td>
                                     <td>Camino 1.0</td>
                                     <td>Gecko</td>
-                                    <td><button class="btn btn-success">Register</button></td>
+                                    <td><button class="btn btn-success">Approve</button></td>
+                                    <td><button class="btn btn-danger">Decline</button></td>
+                                    <td><button class="btn btn-primary">View</button></td>
                                 </tr>
                                 <tr>
                                     <td>Gecko</td>
@@ -134,7 +134,9 @@ Brilliant Public School
                                     <td>Gecko</td>
                                     <td>Camino 1.0</td>
                                     <td>Gecko</td>
-                                    <td><button class="btn btn-success">Register</button></td>
+                                    <td><button class="btn btn-success">Approve</button></td>
+                                    <td><button class="btn btn-danger">Decline</button></td>
+                                    <td><button class="btn btn-primary">View</button></td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -148,14 +150,16 @@ Brilliant Public School
                                               </label>
                                             </div>
                                           </div></th>
-                                        <th>Sl No.</th>
-                                        <th>Enq. No.</th>
-                                        <th>Enquiry Date</th>
-                                        <th>Name</th>
-                                        <th>Class</th>
-                                        <th>Father name</th>
-                                        <th>Last Result</th>
-                                        <th>Action</th>
+                                          <th>Sl No.</th>
+                                          <th>Reg. No.</th>
+                                          <th>Reg. Date</th>
+                                          <th>Name</th>
+                                          <th>Class</th>
+                                          <th>Father name</th>
+                                          <th>Last Result</th>
+                                          <th>Approve</th>
+                                          <th>Decline</th>
+                                          <th>View</th>
                                     </tr>
                                 </tr>
                             </tfoot>
