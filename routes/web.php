@@ -30,6 +30,21 @@ Use App\Http\Controllers\AdmissionRegistrationApprovalSectionController;
 Use App\Http\Controllers\AdmissionRegistrationApprovalHistoryController;
 Use App\Http\Controllers\AdmissionAwaitingController;
 Use App\Http\Controllers\AdmissionFastAdmissionController;
+Use App\Http\Controllers\AdmissionHistoryController;
+Use App\Http\Controllers\AdmissionDocumentPendingController;
+Use App\Http\Controllers\AdmissionStudentUpgradeController;
+Use App\Http\Controllers\AdmissionUpdateController;
+Use App\Http\Controllers\AdmissionSectionAllotmentController;
+Use App\Http\Controllers\LibraryPublisherDetailsController;
+Use App\Http\Controllers\LibraryBookRegisterController;
+Use App\Http\Controllers\LibraryBookRecordController;
+Use App\Http\Controllers\LibraryBookRemoveController;
+Use App\Http\Controllers\LibraryBookAllotmentController;
+Use App\Http\Controllers\LibraryFineController;
+Use App\Http\Controllers\LibraryHistoryController;
+Use App\Http\Controllers\LibraryAademicBookAllotmentReturnController;
+Use App\Http\Controllers\LibraryAcademicFineController;
+Use App\Http\Controllers\LibraryHistoryAcademicController;
 //Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
 /*
 |--------------------------------------------------------------------------
@@ -66,7 +81,7 @@ Route::get('/masters/master_create_subject',[MasterCreateSubjectController::clas
 Route::get('/masters/master_leave',[MasterLiveController::class,'view'])->name('master.leave');
 Route::get('/masters/master_session',[MasterSessionController::class,'view'])->name('master.session');
 Route::get('/admission/enquiry',[AdmissionEnquiryController::class,'view'])->name('admission.enquiry');
-Route::group(['admission'], function(){
+Route::group(['prefix'=>'/admission'], function(){
     Route::get('/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
 Route::get('/view_enquiry_underprocess',[AdmissionViewEnquiryUnderProcessController::class,'view'])->name('admission.view.enquiry.underprocess');
 Route::get('/view_enquiry_disqualified',[AdmissionViewDisQualifiedEnquiryController::class,'view'])->name('admission.view.enquiry.disqualified');
@@ -80,7 +95,23 @@ Route::get('/registration-approval-section',[AdmissionRegistrationApprovalSectio
 Route::get('/registration-approval-history',[AdmissionRegistrationApprovalHistoryController::class,'view'])->name('registration.approval.history');
 Route::get('/awaiting-admission',[AdmissionAwaitingController::class,'view'])->name('awaiting.admission');
 Route::get('/fast-admission',[AdmissionFastAdmissionController::class,'view'])->name('fast.admission');
-
+Route::get('/history-admission',[AdmissionHistoryController::class,'view'])->name('history.admission');
+Route::get('/pending-document',[AdmissionDocumentPendingController::class,'view'])->name('pending.document');
+Route::get('/student_upgrade',[AdmissionStudentUpgradeController::class,'view'])->name('student.upgrade');
+Route::get('/update-admission',[AdmissionUpdateController::class,'view'])->name('update.admission');
+Route::get('/section-allotment',[AdmissionSectionAllotmentController::class,'view'])->name('section.allotment');
+});
+Route::group(['prefix'=>'/library'], function(){
+    Route::get('/publisher_details',[LibraryPublisherDetailsController::class,'view'])->name('library.publish.details');
+    Route::get('/book_register',[LibraryBookRegisterController::class,'view'])->name('library.book.register');
+    Route::get('/book_record',[LibraryBookRecordController::class,'view'])->name('library.book.record');
+    Route::get('/book_remove',[LibraryBookRemoveController ::class,'view'])->name('library.book.remove');
+    Route::get('/book_allotment',[LibraryBookAllotmentController::class,'view'])->name('library.book.allotment');
+    Route::get('/paid_fine',[LibraryFineController::class,'view'])->name('library.paid.fine');
+    Route::get('/history-library',[LibraryHistoryController::class,'view'])->name('library.history');
+    Route::get('/academic-book-allotmet',[LibraryAademicBookAllotmentReturnController::class,'view'])->name('library.academic.book.allotment');
+    Route::get('/academic-fine',[LibraryAcademicFineController::class,'view'])->name('library.academic.fine');
+    Route::get('/academic-library-history',[LibraryHistoryAcademicController::class,'view'])->name('library.academic.library.history');
 });
 // Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
 // Route::get('/admission/view_enquiry_underprocess',[AdmissionViewEnquiryUnderProcessController::class,'view'])->name('admission.view.enquiry.underprocess');

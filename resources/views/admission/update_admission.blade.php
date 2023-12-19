@@ -32,11 +32,12 @@
             background-color: rgb(21, 62, 70);
             border-radius: 10px
         }
+
         @media only screen and (max-width: 600px) {
             .table-wrap {
-    max-width: 1000px;
-  }
-}
+                max-width: 1000px;
+            }
+        }
     </style>
 @endsection
 @section('content')
@@ -47,7 +48,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Fast-Admission</h1>
+                        <h1>Update Admission</h1>
                     </div>
 
                 </div>
@@ -61,13 +62,43 @@
                     <!-- SELECT2 EXAMPLE -->
                     <div class="card card-default">
                         <div class="card-header">
-                            <h3 class="card-title">Fast-Admission Form</h3>
+                            <h3 class="card-title">Update Admission Form</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
 
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Admission No :</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                               <button class="btn btn-success">Go</button>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                    <!-- /.form-group -->
+
+                                    <!-- /.form-group -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Registration No :</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="btn btn-success">Go</button>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                    <!-- /.form-group -->
+
+                                    <!-- /.form-group -->
+                                </div>
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="reg_no">Admission No :</label>
                                         <input type="text" class="form-control" id="reg_no" placeholder="" disabled>
@@ -76,19 +107,7 @@
 
                                     <!-- /.form-group -->
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Registration No :</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="name_student" disabled>
-                                        </div>
-                                        <!-- /.input group -->
-                                    </div>
-                                    <!-- /.form-group -->
-
-                                    <!-- /.form-group -->
-                                </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Session :</label>
                                         <select class="form-control select2" style="width: 100%;">
@@ -149,36 +168,41 @@
                                     <div class="form-group">
                                         <label>Date Of Birth :</label>
                                         <div class="input-group">
-                                          <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                                          </div>
-                                          <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                            </div>
+                                            <input type="date" class="form-control" data-inputmask-alias="datetime"
+                                                data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                                         </div>
                                         <!-- /.input group -->
-                                      </div>
+                                    </div>
                                     <!-- /.form-group -->
 
                                     <!-- /.form-group -->
                                 </div>
                                 <div class=" col-md-6">
                                     <div class="info-box row">
-                                      <div class="info-box-icon bg-light col-sm-5 col-md-4"><span  style="width: 110px; height:100px;"><img src="{{asset('assets/img/avatar5.png')}}" alt="" srcset="" width="100%" height="100%"></span></div>
+                                        <div class="info-box-icon bg-light col-sm-5 col-md-4"><span
+                                                style="width: 110px; height:100px;"><img
+                                                    src="{{ asset('assets/img/avatar5.png') }}" alt=""
+                                                    srcset="" width="100%" height="100%"></span></div>
 
-                                      <div class="info-box-content col-sm-7 col-md-8">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <span class="">Choose only jpeg images.
-                                                    Image size must be below than 80kb.</span>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <span class=""><input type="file" name="" id=""></span>
+                                        <div class="info-box-content col-sm-7 col-md-8">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <span class="">Choose only jpeg images.
+                                                        Image size must be below than 80kb.</span>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <span class=""><input type="file" name=""
+                                                            id=""></span>
+                                                </div>
                                             </div>
                                         </div>
-                                      </div>
-                                      <!-- /.info-box-content -->
+                                        <!-- /.info-box-content -->
                                     </div>
                                     <!-- /.info-box -->
-                                  </div>
+                                </div>
                                 {{-- <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -231,8 +255,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="age">Age :</label>
-                                        <input type="text" class="form-control" id="age"
-                                            placeholder="Last Result">
+                                        <input type="text" class="form-control" id="age" placeholder="Last Result">
                                     </div>
                                     <!-- /.form-group -->
 
@@ -294,48 +317,68 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class1" >
-                                                    </div></td>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class2" >
-                                                    </div></td>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class3" >
-                                                    </div></td>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class4" >
-                                                    </div></td>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class5" >
-                                                    </div></td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class1">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class2">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class3">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class4">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class5">
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class01" >
-                                                    </div></td>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class6" >
-                                                    </div></td>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class7" >
-                                                    </div></td>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class8" >
-                                                    </div></td>
-                                                    <td><div class="form-group">
-                                                        {{-- <label for="class">Class :</label> --}}
-                                                        <input type="text" class="form-control" id="class9" >
-                                                    </div></td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class01">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class6">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class7">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class8">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            {{-- <label for="class">Class :</label> --}}
+                                                            <input type="text" class="form-control" id="class9">
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                             </tbody>
 
@@ -354,23 +397,23 @@
                                 <div class="col-sm-6">
                                     <!-- radio -->
                                     <div class="form-group clearfix">
-                                            <label for="radioPrimary3">
-                                                School Transport Required :
+                                        <label for="radioPrimary3">
+                                            School Transport Required :
+                                        </label>
+                                        <div class="icheck-primary d-inline">
+                                            <input type="radio" id="radioPrimary1" name="r1" checked>
+                                            <label for="radioPrimary1">
+                                                Yes
                                             </label>
-                                      <div class="icheck-primary d-inline">
-                                        <input type="radio" id="radioPrimary1" name="r1" checked>
-                                        <label for="radioPrimary1">
-                                            Yes
-                                        </label>
-                                      </div>
-                                      <div class="icheck-primary d-inline">
-                                        <input type="radio" id="radioPrimary2" name="r1">
-                                        <label for="radioPrimary2">No
-                                        </label>
-                                      </div>
+                                        </div>
+                                        <div class="icheck-primary d-inline">
+                                            <input type="radio" id="radioPrimary2" name="r1">
+                                            <label for="radioPrimary2">No
+                                            </label>
+                                        </div>
 
                                     </div>
-                                  </div>
+                                </div>
                                 <!-- /.col -->
                             </div>
                             <!-- /.row -->

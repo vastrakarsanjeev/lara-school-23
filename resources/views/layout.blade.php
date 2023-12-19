@@ -433,25 +433,25 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('history.admission')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>View Admission History</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('student.upgrade')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Student Upgrade</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('update.admission')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Update Admission</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('section.allotment')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Section Allotment</p>
                                     </a>
@@ -468,61 +468,61 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.publish.details')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Publisher Details</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.book.register')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Book Register Form</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.book.record')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Book Keeping Record</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.book.remove')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Remove Book</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.book.allotment')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Book Allotment & Return</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.paid.fine')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Library Fine</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.history')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Library History</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.academic.book.allotment')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Academic Book Allotment & Return</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.academic.fine')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Academic Library Fine</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('library.academic.library.history')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Academic History</p>
                                     </a>
