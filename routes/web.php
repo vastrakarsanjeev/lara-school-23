@@ -45,6 +45,7 @@ Use App\Http\Controllers\LibraryHistoryController;
 Use App\Http\Controllers\LibraryAademicBookAllotmentReturnController;
 Use App\Http\Controllers\LibraryAcademicFineController;
 Use App\Http\Controllers\LibraryHistoryAcademicController;
+Use App\Http\Controllers\RollNumberAsignController;
 //Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
 /*
 |--------------------------------------------------------------------------
@@ -113,6 +114,10 @@ Route::group(['prefix'=>'/library'], function(){
     Route::get('/academic-fine',[LibraryAcademicFineController::class,'view'])->name('library.academic.fine');
     Route::get('/academic-library-history',[LibraryHistoryAcademicController::class,'view'])->name('library.academic.library.history');
 });
+Route::group(['prefix'=>'/roll-number'], function(){
+    Route::get('/asign-roll-number',[RollNumberAsignController::class,'view'])->name('rollnumber.asign');
+});
+
 // Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
 // Route::get('/admission/view_enquiry_underprocess',[AdmissionViewEnquiryUnderProcessController::class,'view'])->name('admission.view.enquiry.underprocess');
 // Route::get('/admission/view_enquiry_disqualified',[AdmissionViewDisQualifiedEnquiryController::class,'view'])->name('admission.view.enquiry.disqualified');
