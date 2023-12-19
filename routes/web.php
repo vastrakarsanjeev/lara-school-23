@@ -49,6 +49,8 @@ Use App\Http\Controllers\RollNumberAsignController;
 Use App\Http\Controllers\SmsAllStudentController;
 Use App\Http\Controllers\SmsBirthdayController;
 Use App\Http\Controllers\SmsAccountSectionController;
+Use App\Http\Controllers\AssignPrivellegeWorkingEmployeeController;
+Use App\Http\Controllers\AssignPrivellegeExEmployeeController;
 //Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
 /*
 |--------------------------------------------------------------------------
@@ -124,6 +126,10 @@ Route::group(['prefix'=>'/sms'], function(){
     Route::get('/all-student-send-sms',[SmsAllStudentController::class,'view'])->name('sms.allstudent');
     Route::get('/birthday-student-send-sms',[SmsBirthdayController::class,'view'])->name('sms.birthday');
     Route::get('/account-section-sms',[SmsAccountSectionController::class,'view'])->name('sms.account.section');
+});
+Route::group(['prefix'=>'/assign-privellege'], function(){
+    Route::get('/working-employee',[AssignPrivellegeWorkingEmployeeController::class,'view'])->name('ass.pri.working.employee');
+    Route::get('/ex-employee',[AssignPrivellegeExEmployeeController::class,'view'])->name('ass.pri.ex.employee');
 });
 
 // Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
