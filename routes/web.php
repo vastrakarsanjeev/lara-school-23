@@ -46,6 +46,9 @@ Use App\Http\Controllers\LibraryAademicBookAllotmentReturnController;
 Use App\Http\Controllers\LibraryAcademicFineController;
 Use App\Http\Controllers\LibraryHistoryAcademicController;
 Use App\Http\Controllers\RollNumberAsignController;
+Use App\Http\Controllers\SmsAllStudentController;
+Use App\Http\Controllers\SmsBirthdayController;
+Use App\Http\Controllers\SmsAccountSectionController;
 //Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
 /*
 |--------------------------------------------------------------------------
@@ -116,6 +119,11 @@ Route::group(['prefix'=>'/library'], function(){
 });
 Route::group(['prefix'=>'/roll-number'], function(){
     Route::get('/asign-roll-number',[RollNumberAsignController::class,'view'])->name('rollnumber.asign');
+});
+Route::group(['prefix'=>'/sms'], function(){
+    Route::get('/all-student-send-sms',[SmsAllStudentController::class,'view'])->name('sms.allstudent');
+    Route::get('/birthday-student-send-sms',[SmsBirthdayController::class,'view'])->name('sms.birthday');
+    Route::get('/account-section-sms',[SmsAccountSectionController::class,'view'])->name('sms.account.section');
 });
 
 // Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');

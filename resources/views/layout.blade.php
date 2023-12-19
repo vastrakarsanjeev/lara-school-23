@@ -350,19 +350,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('sms.allstudent')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>SMS</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('sms.birthday')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Birthday SMS</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('sms.account.section')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Free Reminder SMS</p>
                                     </a>
