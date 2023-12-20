@@ -50,7 +50,7 @@ Use App\Http\Controllers\SmsAllStudentController;
 Use App\Http\Controllers\SmsBirthdayController;
 Use App\Http\Controllers\SmsAccountSectionController;
 Use App\Http\Controllers\AssignPrivellegeWorkingEmployeeController;
-Use App\Http\Controllers\AssignPrivellegeExEmployeeController;
+Use App\Http\Controllers\PrivilegeController;
 //Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
 /*
 |--------------------------------------------------------------------------
@@ -130,6 +130,10 @@ Route::group(['prefix'=>'/sms'], function(){
 Route::group(['prefix'=>'/assign-privellege'], function(){
     Route::get('/working-employee',[AssignPrivellegeWorkingEmployeeController::class,'view'])->name('ass.pri.working.employee');
     Route::get('/ex-employee',[AssignPrivellegeExEmployeeController::class,'view'])->name('ass.pri.ex.employee');
+});
+Route::group(['prefix'=>'/privellege'], function(){
+    Route::get('/working-employee',[AssignPrivellegeWorkingEmployeeController::class,'view'])->name('ass.pri.working.employee');
+    Route::get('/show_privilege',[PrivilegeController::class,'view'])->name('show.privilege');
 });
 
 // Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
