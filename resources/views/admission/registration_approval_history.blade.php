@@ -53,7 +53,7 @@ Brilliant Public School
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="btn-group w-100">
-                                  <a href="{{route('registration.approval.section')}}" class="btn btn-secondary col fileinput-button">
+                                  <a href="{{route('registration.approval.section')}}" class="btn btn-info col fileinput-button">
                                     <!--<i class="fa-solid fa-circle-check text-success"></i>-->
                                     <span>Registration Section</span>
                                   </a>

@@ -58,7 +58,7 @@ Brilliant Public School
                                     <span>Admission History</span>
                                   </a>
 
-                                  <a href="{{route('pending.document')}}" class="btn btn-secondary col cancel">
+                                  <a href="{{route('pending.document')}}" class="btn btn-info col cancel">
                                     <!--<i class="fas fa-times-circle text-danger"></i>-->
                                     <span>Pending Documents</span>
                                   </a>

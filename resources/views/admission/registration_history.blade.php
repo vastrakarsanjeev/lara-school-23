@@ -53,7 +53,7 @@ Brilliant Public School
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="btn-group w-100">
-                                  <a href="{{route('registration.underprocess')}}" class="btn btn-secondary col fileinput-button">
+                                  <a href="{{route('registration.underprocess')}}" class="btn btn-info col fileinput-button">
                                     {{-- <i class="fa-solid fa-circle-check text-success"></i> --}}
                                     <span>Underprocess Registration</span>
                                   </a>
@@ -61,7 +61,7 @@ Brilliant Public School
                                     {{-- <i class="fas fa-upload " style="color:rgb(219, 145, 6)" ></i> --}}
                                     <span>Declined Registrations</span>
                                   </a>
-                                  <a href="{{route('registration.history')}}" class="btn btn-secondary col cancel">
+                                  <a href="{{route('registration.history')}}" class="btn btn-info col cancel">
                                     {{-- <i class="fas fa-times-circle text-danger"></i> --}}
                                     <span> Registration History</span>
                                   </a>
@@ -126,7 +126,7 @@ Brilliant Public School
 
                             </div>
                             <div class="card-footer">
-                                <button class="btn btn-info">Search</button>
+                                <button class="btn btn-success">Search</button>
                             </div>
                         </div>
                         <div class="col-md-6  p-3 my-2">
@@ -164,7 +164,7 @@ Brilliant Public School
 
                             </div>
                             <div class="card-footer">
-                                <button class="btn btn-info">Search</button>
+                                <button class="btn btn-success">Search</button>
                             </div>
                         </div>
                         <!-- /.col -->

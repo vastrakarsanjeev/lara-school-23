@@ -53,7 +53,7 @@ Brilliant Public School
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="btn-group w-100">
-                                  <a href="{{route('registration.underprocess')}}" class="btn btn-secondary col fileinput-button">
+                                  <a href="{{route('registration.underprocess')}}" class="btn btn-info col fileinput-button">
 
                                     <span>Underprocess Registration</span>
                                   </a>
@@ -61,7 +61,7 @@ Brilliant Public School
 
                                     <span>Declined Registrations</span>
                                   </a>
-                                  <a href="{{route('registration.history')}}" class="btn btn-secondary col cancel">
+                                  <a href="{{route('registration.history')}}" class="btn btn-info col cancel">
 
                                     <span> Registration History</span>
                                   </a>

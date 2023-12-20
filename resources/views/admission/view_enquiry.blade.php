@@ -57,11 +57,11 @@ Brilliant Public School
                                     {{-- <i class="fa-solid fa-circle-check text-success"></i> --}}
                                     <span>Qualified Enquiries</span>
                                   </a>
-                                  <a href="{{route('admission.view.enquiry.underprocess')}}" class="btn btn-secondary col start">
+                                  <a href="{{route('admission.view.enquiry.underprocess')}}" class="btn btn-info col start">
                                     {{-- <i class="fas fa-upload " style="color:rgb(219, 145, 6)" ></i> --}}
                                     <span>Underprocess Enquiries</span>
                                   </a>
-                                  <a href="{{route('admission.view.enquiry.disqualified')}}" class="btn btn-secondary col cancel">
+                                  <a href="{{route('admission.view.enquiry.disqualified')}}" class="btn btn-info col cancel">
                                     {{-- <i class="fas fa-times-circle text-danger"></i> --}}
                                     <span>Disqualified Enquiries</span>
                                   </a>

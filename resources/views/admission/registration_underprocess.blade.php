@@ -57,11 +57,11 @@ Brilliant Public School
                                     {{-- <i class="fa-solid fa-circle-check text-success"></i> --}}
                                     <span>Underprocess Registration</span>
                                   </a>
-                                  <a href="{{route('registration.declined')}}" class="btn btn-secondary col start">
+                                  <a href="{{route('registration.declined')}}" class="btn btn-info col start">
                                     {{-- <i class="fas fa-upload " style="color:rgb(219, 145, 6)" ></i> --}}
                                     <span>Declined Registrations</span>
                                   </a>
-                                  <a href="{{route('registration.history')}}" class="btn btn-secondary col cancel">
+                                  <a href="{{route('registration.history')}}" class="btn btn-info col cancel">
                                     {{-- <i class="fas fa-times-circle text-danger"></i> --}}
                                     <span> Registration History</span>
                                   </a>

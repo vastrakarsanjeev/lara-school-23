@@ -53,11 +53,11 @@ Brilliant Public School
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="btn-group w-100">
-                                  <a href="{{route('admission.view.enquiry')}}" class="btn btn-secondary col fileinput-button">
+                                  <a href="{{route('admission.view.enquiry')}}" class="btn btn-info col fileinput-button">
                                     {{-- <i class="fa-solid fa-circle-check text-success"></i> --}}
                                     <span>Qualified Enquiries</span>
                                   </a>
-                                  <a href="{{route('admission.view.enquiry.underprocess')}}" class="btn btn-secondary col start">
+                                  <a href="{{route('admission.view.enquiry.underprocess')}}" class="btn btn-info col start">
                                     {{-- <i class="fas fa-upload " style="color:rgb(219, 145, 6)" ></i> --}}
                                     <span>Underprocess Enquiries</span>
                                   </a>

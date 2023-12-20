@@ -57,7 +57,7 @@ Brilliant Public School
                                     <!--<i class="fa-solid fa-circle-check text-success"></i>-->
                                     <span>Enquiry Approval & Details Section</span>
                                   </a>
-                                  <a href="{{route('admission.enquiry.approval.history')}}" class="btn btn-secondary col cancel">
+                                  <a href="{{route('admission.enquiry.approval.history')}}" class="btn btn-info col cancel">
                                     <!--<i class="fas fa-times-circle text-danger"></i>-->
                                     <span>Enquiry Approval HIstory</span>
                                   </a>
