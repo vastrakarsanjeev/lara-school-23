@@ -51,6 +51,15 @@ Use App\Http\Controllers\SmsBirthdayController;
 Use App\Http\Controllers\SmsAccountSectionController;
 Use App\Http\Controllers\AssignPrivellegeWorkingEmployeeController;
 Use App\Http\Controllers\PrivilegeController;
+Use App\Http\Controllers\FeeCollectionController;
+Use App\Http\Controllers\FeeAcademicChequeController;
+Use App\Http\Controllers\FeeTransportChequeController;
+Use App\Http\Controllers\FeeEditInstallmentController;
+Use App\Http\Controllers\FeePaymentHistoryController;
+Use App\Http\Controllers\FeeDuplicateReceiptController;
+Use App\Http\Controllers\FeeDiscountApprovalController;
+Use App\Http\Controllers\FeeDiscountDeclineController;
+Use App\Http\Controllers\FeeDiscountHistoryController;
 //Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
 /*
 |--------------------------------------------------------------------------
@@ -134,6 +143,17 @@ Route::group(['prefix'=>'/assign-privellege'], function(){
 Route::group(['prefix'=>'/privellege'], function(){
     Route::get('/working-employee',[AssignPrivellegeWorkingEmployeeController::class,'view'])->name('ass.pri.working.employee');
     Route::get('/show_privilege',[PrivilegeController::class,'view'])->name('show.privilege');
+});
+Route::group(['prefix'=>'/fee'], function(){
+    Route::get('/pay-fee-list',[FeeCollectionController::class,'view'])->name('pay.fee.list');
+    Route::get('/academic_cheque_payment',[FeeAcademicChequeController::class,'view'])->name('academic.cheque.payment');
+    Route::get('/transport_cheque_payment',[FeeTransportChequeController::class,'view'])->name('transport.cheque.payment');
+    Route::get('/edit-installment',[FeeEditInstallmentController::class,'view'])->name('edit.installment');
+    Route::get('/payment-history',[FeePaymentHistoryController::class,'view'])->name('fee.payment.history');
+    Route::get('/fee-duplicate-receipt',[FeeDuplicateReceiptController::class,'view'])->name('fee.duplicate.receipt');
+    Route::get('/fee-discount-approval',[FeeDiscountApprovalController::class,'view'])->name('fee.discount.approval');
+    Route::get('/fee-discount-decline',[FeeDiscountDeclineController::class,'view'])->name('fee.discount.decline');
+    Route::get('/fee-discount-history',[FeeDiscountHistoryController::class,'view'])->name('fee.discount.history');
 });
 
 // Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');

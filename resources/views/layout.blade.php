@@ -978,43 +978,43 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('pay.fee.list')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Fee Collection</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('academic.cheque.payment')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Cheque Status</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('edit.installment')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Edit Fee</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('fee.payment.history')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Payment History</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('fee.duplicate.receipt')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Fee Duplicate Receipt</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('fee.discount.approval')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Discount Approval</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('fee.discount.decline')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Discount History</p>
                                     </a>

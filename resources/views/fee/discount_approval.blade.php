@@ -42,7 +42,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Roll Number Assign</h1>
+                        <h1>Discount Approve</h1>
                     </div>
 
                 </div>
@@ -52,56 +52,14 @@
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-                <!-- SELECT2 EXAMPLE -->
-                <div class="card card-default">
-                    <div class="card-header">
-                        <h3 class="card-title">Roll Number Assign</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Session :</label>
-                                    <select class="form-control select2" style="width: 100%;">
-                                        <option selected="selected">Alabama</option>
-                                        <option>Alaska</option>
-                                        <option>California</option>
-                                        <option>Delaware</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Washington</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="col-md-12"> <label >Class :</label></div>
-                        <div class="col-md-12">
-                            <button type="submit" class="btn btn-success m-1">class-1 joy</button>
-                            <button type="submit" class="btn btn-success m-1">class-2 joy</button>
-                            <button type="submit" class="btn btn-success m-1">class-3 joy</button>
-                            <button type="submit" class="btn btn-success m-1">class-4 joy</button>
-                            <button type="submit" class="btn btn-success m-1">class-5 joy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="content">
-            <div class="container-fluid">
                 <div class="card card-default" style="width:100; over-flow:hidden;">
                     <div class="card-header">
-                        <div class="col-md-6"> <label class="text-danger">Note : To delete all assigned roll numbers of selected class</label></div>
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary m-1">Class-1</button>
-                            <button type="submit" class="btn btn-warning m-1">Joy</button>
-                            <button type="submit" class="btn btn-danger m-1">Delete</button>
+                        <div class="mx-3 my-1">
+                            <h4>Discount Approve  list</h4>
                         </div>
                     </div>
                     <!--<div class="mx-3 my-1">
-                            <h4>Create Class Section</h4>
+                            <h4>Fee Pannel</h4>
                         </div>-->
                     <div class="row mx-3 my-1">
                         <div
@@ -130,7 +88,13 @@
                                     <th>Sl No.</th>
                                     <th>Admission No.</th>
                                     <th>Student Name</th>
-                                    <th>Roll Number</th>
+                                    <th>Class</th>
+                                    <th>Discount On Adm. Fee</th>
+                                    <th>Discount On Tution Fee</th>
+                                    <th>Apply Date</th>
+                                    <th>Comment</th>
+                                    <th>Approve</th>
+                                    <th>Decline</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -138,18 +102,25 @@
                                     <td>Gecko</td>
                                     <td>Camino 1.0</td>
                                     <td>OSX.2+</td>
-                                    <td> <div class="form-group">
-                                        <input type="text" class="form-control">
-                                    </div></td>
-
+                                    <td>Gecko</td>
+                                    <td>Gecko</td>
+                                    <td>Camino 1.0</td>
+                                    <td>OSX.2+</td>
+                                    <td>Gecko</td>
+                                    <td>OSX.2+</td>
+                                    <td>Gecko</td>
                                 </tr>
                                 <tr>
                                     <td>Gecko</td>
                                     <td>Camino 1.0</td>
                                     <td>OSX.2+</td>
-                                    <td> <div class="form-group">
-                                        <input type="text" class="form-control">
-                                    </div></td>
+                                    <td>Gecko</td>
+                                    <td>Gecko</td>
+                                    <td>Camino 1.0</td>
+                                    <td>OSX.2+</td>
+                                    <td>Gecko</td>
+                                    <td>OSX.2+</td>
+                                    <td>Gecko</td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -157,15 +128,21 @@
                                     <th>Sl No.</th>
                                     <th>Admission No.</th>
                                     <th>Student Name</th>
-                                    <th>Roll Number</th>
+                                    <th>Class</th>
+                                    <th>Discount On Adm. Fee</th>
+                                    <th>Discount On Tution Fee</th>
+                                    <th>Apply Date</th>
+                                    <th>Comment</th>
+                                    <th>Approve</th>
+                                    <th>Decline</th>
                                 </tr>
                             </tfoot>
                         </table>
                     </div>
-                    <div class="card-footer row">
+                    {{-- <div class="card-footer row">
                             <button type="submit" class="btn btn-info m-1"><i class="fa-solid fa-print"></i> Print</button>
                             <button type="submit" class="btn btn-info m-1">Assign Roll Number</button>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </section>
