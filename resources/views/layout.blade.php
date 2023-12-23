@@ -707,55 +707,61 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('human.employee.approval')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Employee Approval</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('human.employee.register')}}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Employee Registration</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('human.employee.attendance')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Employee Attendance</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('human.loan.apply')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Loan Apply Form</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('human.salary.view')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Final Salary View</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('human.emp.salary.update')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Emp. Details & Salary Update</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('human.salary.certificate')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Salary Certificate</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('human.advance.loan')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>View Advance Loan</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('human.pf.loan')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>View Pf Loan</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('human.working.official.staff')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>View Employee</p>
                                     </a>
@@ -1187,7 +1193,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('teacher.class.assign.primary')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Teacher Class Assign(Primary)</p>
                                     </a>
@@ -1210,7 +1216,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('active.log')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>View Log</p>
                                     </a>
@@ -1227,9 +1233,26 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('student.attendance')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Student Attendance</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                   Setting
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('setting')}}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Setting</p>
                                     </a>
                                 </li>
                             </ul>

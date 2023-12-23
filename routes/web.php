@@ -60,7 +60,23 @@ Use App\Http\Controllers\FeeDuplicateReceiptController;
 Use App\Http\Controllers\FeeDiscountApprovalController;
 Use App\Http\Controllers\FeeDiscountDeclineController;
 Use App\Http\Controllers\FeeDiscountHistoryController;
-//Use App\Http\Controllers\AdmissionEnquiryApprovalHistoryController;
+Use App\Http\Controllers\HumanResourceEmployeeApprovalController;
+Use App\Http\Controllers\HumanResourceRegisterEmployeeController;
+Use App\Http\Controllers\StudentAttendanceController;
+Use App\Http\Controllers\ActiveLogController;
+Use App\Http\Controllers\TeacherClassAssignPriController;
+Use App\Http\Controllers\HumanResourceEmployeeAttendanceController;
+Use App\Http\Controllers\HumanResourceLoanApplyController;
+Use App\Http\Controllers\HumanResourceSalaryViewController;
+Use App\Http\Controllers\HumanResourceEmpSalUpdateController;
+Use App\Http\Controllers\HumanResourceSalaryCertificateController;
+Use App\Http\Controllers\HumanResourceAdvanceLoanController;
+Use App\Http\Controllers\HumanResourcePfLoanController;
+Use App\Http\Controllers\HumanResourceWorkingOffSttController;
+Use App\Http\Controllers\HumanResourceWorkingSupSttController;
+Use App\Http\Controllers\HumanResourceExOffSttController;
+Use App\Http\Controllers\HumanResourceExSupSttController;
+Use App\Http\Controllers\SettingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -155,7 +171,33 @@ Route::group(['prefix'=>'/fee'], function(){
     Route::get('/fee-discount-decline',[FeeDiscountDeclineController::class,'view'])->name('fee.discount.decline');
     Route::get('/fee-discount-history',[FeeDiscountHistoryController::class,'view'])->name('fee.discount.history');
 });
-
+Route::group(['prefix'=>'/human-resource'], function(){
+    Route::get('/employee-approval',[HumanResourceEmployeeApprovalController::class,'view'])->name('human.employee.approval');
+     Route::get('/employee-register',[HumanResourceRegisterEmployeeController::class,'view'])->name('human.employee.register');
+    Route::get('/employee-attendance',[HumanResourceEmployeeAttendanceController::class,'view'])->name('human.employee.attendance');
+    Route::get('/loan-apply',[HumanResourceLoanApplyController::class,'view'])->name('human.loan.apply');
+    Route::get('/salary-view',[HumanResourceSalaryViewController::class,'view'])->name('human.salary.view');
+    Route::get('/emp-salary-update',[HumanResourceEmpSalUpdateController::class,'view'])->name('human.emp.salary.update');
+    Route::get('/salary-certificate',[HumanResourceSalaryCertificateController::class,'view'])->name('human.salary.certificate');
+    Route::get('/advance-loan',[HumanResourceAdvanceLoanController::class,'view'])->name('human.advance.loan');
+    Route::get('/pf-loan',[HumanResourcePfLoanController::class,'view'])->name('human.pf.loan');
+    Route::get('/working-official_staff',[HumanResourceWorkingOffSttController::class,'view'])->name('human.working.official.staff');
+    Route::get('/working-suport_staff',[HumanResourceWorkingSupSttController::class,'view'])->name('human.working.suport.staff');
+    Route::get('/ex-official_staff',[HumanResourceExoffSttController::class,'view'])->name('human.ex.official.staff');
+    Route::get('/ex-suport_staff',[HumanResourceExSupSttController::class,'view'])->name('human.ex.suport.staff');
+});
+Route::group(['prefix'=>'/student-atendance'], function(){
+    Route::get('/student-atendance',[StudentAttendanceController::class,'view'])->name('student.attendance');
+});
+Route::group(['prefix'=>'/active-log'], function(){
+    Route::get('active-log',[ActiveLogController::class,'view'])->name('active.log');
+});
+Route::group(['prefix'=>'/teacher-class-assign'], function(){
+    Route::get('teacher-class-assign-primary',[TeacherClassAssignPriController::class,'view'])->name('teacher.class.assign.primary');
+});
+Route::group(['prefix'=>'/setting'], function(){
+    Route::get('setting',[SettingController::class,'view'])->name('setting');
+});
 // Route::get('/admission/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
 // Route::get('/admission/view_enquiry_underprocess',[AdmissionViewEnquiryUnderProcessController::class,'view'])->name('admission.view.enquiry.underprocess');
 // Route::get('/admission/view_enquiry_disqualified',[AdmissionViewDisQualifiedEnquiryController::class,'view'])->name('admission.view.enquiry.disqualified');

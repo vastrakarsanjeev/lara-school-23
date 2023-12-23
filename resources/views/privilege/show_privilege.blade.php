@@ -32,6 +32,9 @@
             background-color: rgb(21, 62, 70);
             border-radius: 10px
         }
+        .card-header{
+            background-color:  rgb(15, 17, 17,0.2);
+        }
     </style>
 @endsection
 @section('content')
@@ -54,7 +57,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="card card-info">
+                        <div class="card card-inf">
                             <div class="card-header">
                                 <h3 class="card-title">Admission</h3>
                             </div>
