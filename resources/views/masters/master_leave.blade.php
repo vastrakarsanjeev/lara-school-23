@@ -54,13 +54,15 @@ Brilliant Public School
                     <div class="card-header">
                         <h3 class="card-title">Leave Master  Form</h3>
                     </div>
-                    <!-- /.card-header -->
+                    <form action="{{ route('master.leave.save') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value="{{isset($upd)?$upd->id:''}}">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="cl">CL :</label>
-                                    <input type="text" class="form-control" id="cl" placeholder="Casual Leave">
+                                    <input type="text" class="form-control" id="cl" placeholder="Casual Leave" name="cl">
                                 </div>
                                 <!-- /.form-group -->
 
@@ -69,7 +71,7 @@ Brilliant Public School
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="ml">ML :</label>
-                                    <input type="text" class="form-control" id="ml" placeholder="Medical Leave">
+                                    <input type="text" class="form-control" id="ml" placeholder="Medical Leave" name="ml">
                                 </div>
                                 <!-- /.form-group -->
 
@@ -78,7 +80,7 @@ Brilliant Public School
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="vl">VL :</label>
-                                    <input type="text" class="form-control" id="vl" placeholder="Vacation Leave">
+                                    <input type="text" class="form-control" id="vl" placeholder="Vacation Leave" name="vl">
                                 </div>
                                 <!-- /.form-group -->
 
@@ -87,7 +89,7 @@ Brilliant Public School
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="sl">SL :</label>
-                                    <input type="text" class="form-control" id="sl" placeholder="Special Leave">
+                                    <input type="text" class="form-control" id="sl" placeholder="Special Leave" name="sl">
                                 </div>
                                 <!-- /.form-group -->
 
@@ -98,10 +100,12 @@ Brilliant Public School
                         <!-- /.row -->
                         <!-- /.row -->
                     </div>
+
                     <!-- /.card-body -->
                     <div class="card-footer">
                         <button type="submit" class="btn btn-info">Submit</button>
                     </div>
+                </form>
                 </div>
                 <!-- /.card -->
 

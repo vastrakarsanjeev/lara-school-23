@@ -4,7 +4,7 @@ Brilliant Public School
 @endsection
 @section('style')
     <style>
-.card-header {
+/* .card-header {
     background-color: transparent;
     border-bottom: 4px solid rgba(42, 110, 236, 0.3);
     padding: 0.75rem 1.25rem;
@@ -19,7 +19,7 @@ Brilliant Public School
         ::-webkit-scrollbar{
       width: 5px;
       height: 5px;
-      /*background-color:white;*/
+
     }
 
     ::-webkit-scrollbar-track{
@@ -28,7 +28,7 @@ Brilliant Public School
     ::-webkit-scrollbar-thumb{
         background-color: rgb(21, 62, 70);
             border-radius: 10px
-   }
+   } */
     </style>
 @endsection
 @section('content')
@@ -38,6 +38,16 @@ Brilliant Public School
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
+                    <div class="col-md-12">
+                        @if (session()->has('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>{{ session('success') }}</strong>
+                                <i class="fa-solid fa-xmark btn-close"></i>
+                            </div>
+                        @else
+                            <h1 class="text-danger">{{ session('error') }}</h1>
+                        @endif
+                    </div>
                     <div class="col-sm-6">
                         <h1>Create Activity  </h1>
                     </div>
@@ -54,42 +64,26 @@ Brilliant Public School
                     <div class="card-header">
                         <h3 class="card-title">Create Activity  Form</h3>
                     </div>
-                    <!-- /.card-header -->
+                    <form action="{{ route('master.create.activity.save') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ isset($upd) ? $upd->id : '' }}">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="activity">Activity :</label>
-                                    <input type="text" class="form-control" id="activity" placeholder="Activity Decided">
+                                    <input type="text" class="form-control" id="activity" placeholder="Activity Decided" name="activity" value="{{ old('depart_name', isset($upd) ? $upd->activity : '') }}">
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
                             </div>
                             <!-- /.col -->
                         </div>
-                        <!-- /.row -->
-                        <!-- /.row -->
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-info">Submit</button>
+                        <button type="submit" class="btn btn-info">{{ isset($upd) ? 'Update' : 'Submit' }}</button>
                     </div>
+                    </form>
                 </div>
-                <!-- /.card -->
-
-
-                <!-- /.card -->
-
-
-                <!-- /.card -->
-
-
-                <!-- /.row -->
-
-                <!-- /.row -->
-
-                <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
         </section>
@@ -133,18 +127,16 @@ Brilliant Public School
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($activities as $activity)
                                 <tr>
-                                    <td>Gecko</td>
-                                    <td>Camino 1.0</td>
-                                    <td><button class="btn btn-success">Update</button></td>
-                                    <td><button class="btn btn-danger">Delete</button></td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $activity->activity }}</td>
+                                    <td><a href="{{ route('master.create.activity.edit', $activity->id) }}"
+                                        class="btn btn-outline-info"><i class="fa-solid fa-pen-to-square"></a></td>
+                                            <td><a href="{{ route('master.create.activity.delete', $activity->id) }}"
+                                                class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></a></td>
                                 </tr>
-                                <tr>
-                                    <td>Gecko</td>
-                                    <td>Camino 1.5</td>
-                                    <td><button class="btn btn-success">Update</button></td>
-                                    <td><button class="btn btn-danger">Delete</button></td>
-                                </tr>
+                                @endforeach
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -161,30 +153,9 @@ Brilliant Public School
                         Use paginate
                     </div>
                 </div>
-                <!-- /.card -->
-
-
-                <!-- /.card -->
-
-
-                <!-- /.card -->
-
-
-                <!-- /.row -->
-
-                <!-- /.row -->
-
-                <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
         </section>
-
-        <section>
- <!-- SELECT2 EXAMPLE -->
-
-
-        </section>
-        <!-- /.content -->
     </div>
 @endsection
 @section('script')

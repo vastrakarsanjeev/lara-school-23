@@ -12,165 +12,146 @@
             border-top-left-radius: 0.25rem;
             border-top-right-radius: 0.25rem;
         }
+
         .table-wrap {
             max-height: 500px;
             overflow: scroll;
         }
-        ::-webkit-scrollbar{
-      width: 5px;
-      height: 5px;
-      /*background-color:white;*/
-    }
 
-    ::-webkit-scrollbar-track{
-        background-color:transparent;
-    }
-    ::-webkit-scrollbar-thumb{
-        background-color: rgb(21, 62, 70);
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            /*background-color:white;*/
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(21, 62, 70);
             border-radius: 10px
-   }
+        }
     </style>
 @endsection
 @section('content')
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
+
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
+                    <div class="col-md-12">
+                        @if (session()->has('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>{{ session('success') }}</strong>
+                                <i class="fa-solid fa-xmark btn-close"></i>
+                            </div>
+                        @else
+                            <h1 class="text-danger">{{ session('error') }}</h1>
+                        @endif
+                    </div>
                     <div class="col-sm-6">
                         <h1>Calculation Master</h1>
                     </div>
 
                 </div>
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
-
-        <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-                <!-- SELECT2 EXAMPLE -->
                 <div class="card card-default">
                     <div class="card-header">
                         <h3 class="card-title">Calculation Master Form</h3>
                     </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <div class="row">
-                            <!-- /.col -->
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="d_a">D.A. :</label>
-                                    <input type="text" class="form-control" id="d_a" placeholder="D.A.">
+                    <form action="{{ route('master.salary.calculation.save') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ isset($upd) ? $upd->id : '' }}">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="d_a">D.A. :</label>
+                                        <input type="text" class="form-control" id="d_a" placeholder="D.A."
+                                            name="da" value="{{ old('da', isset($upd)?$upd->da:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="h_r_a">H.R.A :</label>
-                                    <input type="text" class="form-control" id="h_r_a" placeholder="H.R.A">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="h_r_a">H.R.A :</label>
+                                        <input type="text" class="form-control" id="h_r_a" placeholder="H.R.A"
+                                            name="hra" value="{{ old('hra', isset($upd)?$upd->hra:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="t_a">T.A. :</label>
-                                    <input type="text" class="form-control" id="t_a" placeholder="T.A.">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="t_a">T.A. :</label>
+                                        <input type="text" class="form-control" id="t_a" placeholder="T.A."
+                                            name="ta" value="{{ old('ta', isset($upd)?$upd->ta:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="t_d_s">T.D.S :</label>
-                                    <input type="text" class="form-control" id="t_d_s" placeholder="T.D.S">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="t_d_s">T.D.S :</label>
+                                        <input type="text" class="form-control" id="t_d_s" placeholder="T.D.S"
+                                            name="tds" value="{{ old('tds', isset($upd)?$upd->tds:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="pf_deduction">P.F (Deduction) :</label>
-                                    <input type="text" class="form-control" id="pf_deduction" placeholder="P.F (In Percent)">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="pf_deduction">P.F (Deduction) :</label>
+                                        <input type="text" class="form-control" id="pf_deduction"
+                                            placeholder="P.F (In Percent)" name="pfdeduction" value="{{ old('pfdeduction', isset($upd)?$upd->pf:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="basic_gp_wd_pf">Basic+GP as per W.D. For P.F :</label>
-                                    <input type="text" class="form-control" id="basic_gp_wd_pf" placeholder=" P.F">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="basic_gp_wd_pf">Basic+GP as per W.D. For P.F :</label>
+                                        <input type="text" class="form-control" id="basic_gp_wd_pf" placeholder=" P.F"
+                                            name="basicgpwdpf" value="{{ old('basicgpwdpf', isset($upd)?$upd->basic_gp_pf:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="esi_deduction">E.S.I (Deduction) :</label>
-                                    <input type="text" class="form-control" id="esi_deduction" placeholder="E.S.I">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="esi_deduction">E.S.I (Deduction) :</label>
+                                        <input type="text" class="form-control" id="esi_deduction" placeholder="E.S.I"
+                                            name="esideduction" value="{{ old('esideduction', isset($upd)?$upd->esi:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="e_p_f">E.P.F (Pool Fund) :</label>
-                                    <input type="text" class="form-control" id="e_p_f" placeholder="E.P.F (In Percent)">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="e_p_f">E.P.F (Pool Fund) :</label>
+                                        <input type="text" class="form-control" id="e_p_f"
+                                            placeholder="E.P.F (In Percent)" name="epf" value="{{ old('epf', isset($upd)?$upd->epf_pool_fund:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="max_sal_lim_epf">Maximum Salary Limit For EPF :</label>
-                                    <input type="text" class="form-control" id="max_sal_lim_epf" placeholder="E.P.F ">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="max_sal_lim_epf">Maximum Salary Limit For EPF :</label>
+                                        <input type="text" class="form-control" id="max_sal_lim_epf" placeholder="E.P.F "
+                                            name="maxsallimepf" value="{{ old('maxsallimepf', isset($upd)?$upd->max_epf:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="e_s_i">E.S.I (Pool Fund) :</label>
-                                    <input type="text" class="form-control" id="e_s_i" placeholder="E.S.I">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="e_s_i">E.S.I (Pool Fund) :</label>
+                                        <input type="text" class="form-control" id="e_s_i" placeholder="E.S.I"
+                                            name="esi" value="{{ old('esi', isset($upd)?$upd->esi_pool_fund:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="salary_ded_partition">Salary Deduction Partition :</label>
-                                    <input type="text" class="form-control" id="salary_ded_partition" placeholder="Salary Deduction Partition">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="salary_ded_partition">Salary Deduction Partition :</label>
+                                        <input type="text" class="form-control" id="salary_ded_partition"
+                                            placeholder="Salary Deduction Partition" name="salarydadpartition" value="{{ old('salarydadpartition', isset($upd)?$upd->salary_partition:'') }}">
+                                    </div>
                                 </div>
-                                <!-- /.form-group -->
-
-                                <!-- /.form-group -->
                             </div>
-                            <!-- /.col -->
                         </div>
-                        <!-- /.row -->
-
-                        <!-- /.row -->
-                    </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-success">Submit Application</button>
-                    </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">{{isset($upd)?'Update':'Submit'}}</button>
+                        </div>
+                    </form>
                 </div>
-                <!-- /.card -->
-
-                <!-- SELECT2 EXAMPLE -->
                 <div class="card card-default">
                     <div class="card-header">
                         <h3 class="card-title">Calculation Master List</h3>
@@ -195,7 +176,6 @@
                             </span>
                         </div>
                     </div>
-                    <!-- /.card-header -->
                     <div class="card-body table-wrap">
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
@@ -216,22 +196,25 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Gecko</td>
-                                    <td>Camino 1.0</td>
-                                    <td>OSX.2+</td>
-                                    <td>1.8</td>
-                                    <td>1.8</td>
-                                    <td>A</td>
-                                </tr>
-                                <tr>
-                                    <td>Gecko</td>
-                                    <td>Camino 1.5</td>
-                                    <td>OSX.3+</td>
-                                    <td>1.8</td>
-                                    <td>1.8</td>
-                                    <td>A</td>
-                                </tr>
+                                    @foreach ($salarycals as $salarycal)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $salarycal->da }}</td>
+                                        <td>{{ $salarycal->hra }}</td>
+                                        <td>{{ $salarycal->ta }}</td>
+                                        <td>{{ $salarycal->tds }}</td>
+                                        <td>{{ $salarycal->pf }}</td>
+                                        <td>{{ $salarycal->basic_gp_pf }}</td>
+                                        <td>{{ $salarycal->esi }}</td>
+                                        <td>{{ $salarycal->esi_pool_fund }}</td>
+                                        <td>{{ $salarycal->epf_pool_fund }}</td>
+                                        <td>{{ $salarycal->max_epf }}</td>
+                                        <td>{{ $salarycal->salary_partition }}</td>
+                                        <td><a href="{{ route('master.salary.calculation.edit', $salarycal->id) }}"
+                                            class="btn btn-outline-info"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    </td>
+                                    </tr>
+                                    @endforeach
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -257,21 +240,8 @@
                         Use paginate
                     </div>
                 </div>
-                <!-- /.card -->
-
-
-                <!-- /.card -->
-
-
-                <!-- /.row -->
-
-                <!-- /.row -->
-
-                <!-- /.row -->
             </div>
-            <!-- /.container-fluid -->
         </section>
-        <!-- /.content -->
     </div>
 @endsection
 @section('script')

@@ -77,6 +77,7 @@ Use App\Http\Controllers\HumanResourceWorkingSupSttController;
 Use App\Http\Controllers\HumanResourceExOffSttController;
 Use App\Http\Controllers\HumanResourceExSupSttController;
 Use App\Http\Controllers\SettingController;
+Use App\Http\Controllers\TestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -91,26 +92,69 @@ Use App\Http\Controllers\SettingController;
 Route::get('/', function () {
     return view('home');
 })->name('home');
-
+Route::get('/practice', function () {
+    return view('practice');
+})->name('home');
 //Route::get('/master', function () {
-  //  return view('master_section');s
+  //  return view('master_section');
 //});
+Route::get('/test',[TestController::class,'index'])->name('test');
 Route::get('/super_dashboard',[SuperDashbordController::class,'view'])->name('super.dashboard');
 Route::get('/masters/master_section',[MasterSectionController::class,'view'])->name('master.section');
+Route::post('/masters/master_section',[MasterSectionController::class,'save'])->name('master.section.save');
+Route::get('/masters/master-section/{id}',[MasterSectionController::class,'edit'])->name('masters.mastersection.edit');
+// Route::put('/masters/master_section/{id}',[MasterSectionController::class,'update'])->name('masters.master.section.update');
+//--------------master_section complete----------------
 Route::get('/masters/master_library_rule',[MasterLibraryRuleController::class,'view'])->name('master.library.rule');
+Route::post('/masters/master_library_rule',[MasterLibraryRuleController::class,'save'])->name('master.library.rule.save');
+Route::get('/masters/master_library_rule/{id}',[MasterLibraryRuleController::class,'edit'])->name('master.library.rule.edit');
+//---------------------master_library_rule complete------------------------------
 Route::get('/masters/master_salary_calculation',[MasterSalaryCalculationController::class,'view'])->name('master.salary.calculation');
+Route::post('/masters/master_salary_calculation',[MasterSalaryCalculationController::class,'save'])->name('master.salary.calculation.save');
+Route::get('/masters/master_salary_calculation/{id}',[MasterSalaryCalculationController::class,'edit'])->name('master.salary.calculation.edit');
+//-----------------------master_salary_calculation----------------------------------
 Route::get('/masters/master_add_subject_class',[MasterAddSubjectToClassController::class,'view'])->name('master.add.subject.to.class');
 Route::get('/masters/master_empolyee_salary',[MasterEmpolyeeSalaryController::class,'view'])->name('master.empolyee.salary');
-Route::get('/masters/master_house',[MasterHouseController::class,'view'])->name('master.house');
+Route::get('/masters/master-house',[MasterHouseController::class,'view'])->name('master.house');
+Route::post('/masters/master-house',[MasterHouseController::class,'save'])->name('master.house.save');
+Route::get('/masters/master-house/{id}',[MasterHouseController::class,'edit'])->name('masters.masterhouse.edit');
+ Route::get('/masters/maste-house-delelte/{id}',[MasterHouseController::class,'delete'])->name('masters.master.house.delete');
+//--------------------master_house complete---------------------------------------------
 Route::get('/masters/master_create_activity',[MasterCreateActivityController::class,'view'])->name('master.create_activity');
+Route::post('/masters/master_create_activity',[MasterCreateActivityController::class,'save'])->name('master.create.activity.save');
+Route::get('/masters/master_create_activity{id}',[MasterCreateActivityController::class,'edit'])->name('master.create.activity.edit');
+Route::get('/masters/master_create_activity/delete{id}',[MasterCreateActivityController::class,'delete'])->name('master.create.activity.delete');
+//---------------------master_create_activities--------------------------------
 Route::get('/masters/master_fee',[MasterFeeController::class,'view'])->name('master.fee');
 Route::get('/masters/master_department',[MasterDepartmentController::class,'view'])->name('master.department');
+Route::post('/masters/master_department',[MasterDepartmentController::class,'save'])->name('master.department.save');
+Route::get('/masters/master_department/{id}',[MasterDepartmentController::class,'edit'])->name('master.department.edit');
+Route::get('/masters/master_department/delete/{id}',[MasterDepartmentController::class,'delete'])->name('master.department.delete');
+//-----------------master_department complete----------------------------
 Route::get('/masters/master_designation',[MasterDesignationController::class,'view'])->name('master.designation');
+Route::post('/masters/master_designation',[MasterDesignationController::class,'save'])->name('master.designation.save');
+Route::get('/masters/master_designation/{id}',[MasterDesignationController::class,'edit'])->name('master.designation.edit');
+Route::get('/masters/master_designation/delete/{id}',[MasterDesignationController::class,'delete'])->name('master.designation.delete');
+//-----------------master_designation complete-------------------------------
 Route::get('/masters/master_class',[MasterClassController::class,'view'])->name('master.class');
+Route::get('/masters/masterclass/{id}/edit',[MasterClassController::class,'edit'])->name('masters.masterclass.edit');
+Route::put('/masters/master_class/{id}',[MasterClassController::class,'update'])->name('masters.master.class.update');
+// ------------------------
+// Route::get('/masters/master_class/{id}',[MasterClassController::class,'edit']);
 Route::get('/masters/master_discount_coupon',[MasterDiscountCouponController::class,'view'])->name('master.discount_coupon');
+
 Route::get('/masters/master_create_subject',[MasterCreateSubjectController::class,'view'])->name('master.create.subject');
+Route::post('/masters/master_create_subject',[MasterCreateSubjectController::class,'save'])->name('master.create.subject.save');
+Route::get('/masters/create-subject/{id}/edit',[MasterCreateSubjectController::class,'edit'])->name('masters.create.subject.edit');
+Route::get('/masters/master_create_subject/{id}',[MasterCreateSubjectController::class,'destroy'])->name('masters.master.create.subject.destroy');
+//--------------------master_create_subject complete---------------------------------
 Route::get('/masters/master_leave',[MasterLiveController::class,'view'])->name('master.leave');
+Route::post('/masters/master_leave',[MasterLiveController::class,'save'])->name('master.leave.save');
+
+// --------------------------master_leave complete-------------------------------------
 Route::get('/masters/master_session',[MasterSessionController::class,'view'])->name('master.session');
+Route::post('/masters/master_session',[MasterSessionController::class,'save'])->name('master.session.save');
+ Route::put('/masters/master_session/{id}',[MasterSessionController::class,'update'])->name('masters.master.session.update');
 Route::get('/admission/enquiry',[AdmissionEnquiryController::class,'view'])->name('admission.enquiry');
 Route::group(['prefix'=>'/admission'], function(){
     Route::get('/view_enquiry',[AdmissionViewEnquiryController::class,'view'])->name('admission.view.enquiry');
@@ -154,7 +198,7 @@ Route::group(['prefix'=>'/sms'], function(){
 });
 Route::group(['prefix'=>'/assign-privellege'], function(){
     Route::get('/working-employee',[AssignPrivellegeWorkingEmployeeController::class,'view'])->name('ass.pri.working.employee');
-    Route::get('/ex-employee',[AssignPrivellegeExEmployeeController::class,'view'])->name('ass.pri.ex.employee');
+   // Route::get('/ex-employee',[AssignPrivellegeExEmployeeController::class,'view'])->name('ass.pri.ex.employee');
 });
 Route::group(['prefix'=>'/privellege'], function(){
     Route::get('/working-employee',[AssignPrivellegeWorkingEmployeeController::class,'view'])->name('ass.pri.working.employee');

@@ -213,11 +213,7 @@
             </div>
             <!-- /.container-fluid -->
         </section>
-        <section>
-            <!-- SELECT2 EXAMPLE -->
 
-
-        </section>
         <!-- /.content -->
     </div>
 @endsection
